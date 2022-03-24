@@ -1,19 +1,13 @@
-/*const hatchways(url) = {
-    method: 'GET',
-    url : 'https://api.hatchways.io/assessment/students'
-}; */
-url = 'https://api.hatchways.io/assessment/students';
-try {
-async function getData() {
-    const response = await fetch('url', {
-        method: 'GET',
-        url : 'https://api.hatchways.io/assessment/students'
-    })
-    if (response.ok) {
-        const jsonResponse = await response.json();
-            renderResponse(jsonResponse);}
-    }
-} catch(error) {
-    console.log(error);
-};
+//implement API
 
+fetch('https://api.hatchways.io/assessment/students')
+  .then(response => response.json())
+  .then(json => console.log(json));
+
+  const mainContainer = document.getElementById("data");
+  for (let i = 0; i < data.length; i++ ) {
+      //appending each entry onto the page
+  }
+
+  const div = document.createElement("div");
+  mainContainer.appendChild(div);
