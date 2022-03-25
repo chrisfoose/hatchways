@@ -10,4 +10,5 @@ fetch('https://api.hatchways.io/assessment/students')
   }
 
   const div = document.createElement("div");
+  div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
   mainContainer.appendChild(div);
