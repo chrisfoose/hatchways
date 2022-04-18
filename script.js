@@ -1,3 +1,4 @@
+console.log('Connected!');
 //implement API
 
 fetch('https://api.hatchways.io/assessment/students')
