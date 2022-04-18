@@ -27,3 +27,8 @@ const pageData = async (event) => {
   const div = document.createElement("div");
   div.innerHTML = 'Name: ' + pageData[i].firstName + ' ' + pageData[i].lastName;
   mainContainer.appendChild(div);
+
+  function displayData(data) {
+      const students = data.students[0];
+      const studentDiv = document.getElementById('students');
+  };
