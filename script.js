@@ -1,9 +1,9 @@
 console.log('Connected!');
 //implement API
 
-// fetch('https://api.hatchways.io/assessment/students')
-//   .then(response => response.json())
-//   .then(json => console.log(json));
+fetch('https://api.hatchways.io/assessment/students')
+  .then(response => response.json())
+  .then(json => console.log(json));
 
 const pageData = async (event) => {
   try {
@@ -25,5 +25,5 @@ const pageData = async (event) => {
   }
 
   const div = document.createElement("div");
-  div.innerHTML = 'Name: ' + pageData[i].firstName + ' ' + data[i].lastName;
+  div.innerHTML = 'Name: ' + pageData[i].firstName + ' ' + pageData[i].lastName;
   mainContainer.appendChild(div);
