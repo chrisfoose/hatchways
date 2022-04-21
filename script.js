@@ -22,13 +22,17 @@ const pageData = async (event) => {
   const mainContainer = document.getElementById("PageData");
   for (let i = 0; i < pageData.length; i++ ) {
       //appending each entry onto the page
-  }
+  
+
+  //get the student data
+  const students = pageData.students;
 
   const div = document.createElement("div");
-  div.innerHTML = 'Name: ' + pageData[i].firstName + ' ' + pageData[i].lastName;
-  mainContainer.appendChild(div);
-
-  function displayData(data) {
-      const students = data.students[0];
-      const studentDiv = document.getElementById('students');
+  div.innerHTML = 'Name: ' + pageData.firstName + ' ' + pageData.lastName;
+  // div.appendChild(pageData);
+  } 
+  async function displayData(pageData) {
+      const students = pageData.students[0];
+      const studentList = document.getElementById('students');
+      students.appendChild(studentList);
   };
