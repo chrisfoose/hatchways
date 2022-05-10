@@ -37,11 +37,12 @@ const avgGrades = (grades) => {
 const createDiv = (student) => {
   const gradeAverage = avgGrades(student.grades);
   return `<div>
+    <h2>${student.firstName} ${student.lastName}</h2>
     <p><img src=${student.pic}></p>
     <p>Email: ${student.email} </p>
     <p>Company: ${student.company} </p>
     <p>Skill: ${student.skill} </p>
-    <p>Name: ${student.firstName} ${student.lastName}</p>
+    
     <p>Average:  ${gradeAverage} </p>`
 };
 
