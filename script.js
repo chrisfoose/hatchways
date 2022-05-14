@@ -37,13 +37,15 @@ const avgGrades = (grades) => {
 const createDiv = (student) => {
   const gradeAverage = avgGrades(student.grades);
   return `<div class="student">
-    <h2 id='name'>${student.firstName} ${student.lastName}</h2>
+    
+    <h2 class='name'>${student.firstName} ${student.lastName}</h2>
     <p><img src=${student.pic}></p>
     <p>Email: ${student.email} </p>
     <p>Company: ${student.company} </p>
     <p>Skill: ${student.skill} </p>
     
-    <p>Average:  ${gradeAverage} </p>`
+    <p>Average:  ${gradeAverage} </p>
+    `
 };
 
 
@@ -56,20 +58,30 @@ pageData().then(studentData => {
   mainContainer.innerHTML = HTMLArray.join('\n');
 });
 
-function filterList() {
-  let input = document.getElementById('input');
-  const filterCase = input.value.toLowerCase();
-  const name = document.getElementById('name');
-  const h2 = getElementByTagName('h2');
+// function filterList() {
+//   let input = document.getElementById('input');
+//   const filterCase = input.value.toLowerCase();
+//   const name = document.getElementById('name');
+//   const h2 = getElementByTagName('h2');
 
-  for (i = 0; i < input.length; i++) {
-    txt = name[i].getElementById('name')[0];
-    if (txt.toLowerCase().indexOf(filterCase) > -1) {
-      name[i].style.display = ""; 
-    } else {
-      name[i].style.display = "none";
-    }
-    }
-  };
+//   for (i = 0; i < input.length; i++) {
+//     txt = name[i].getElementById('name')[0];
+//     if (txt.toLowerCase().indexOf(filterCase) > -1) {
+//       name[i].style.display = ""; 
+//     } else {
+//       name[i].style.display = "none";
+//     }
+//     }
+//   };
 
-  filterList();
+//   filterList();
+
+//Putting in code for list.js
+var options = {
+  valueNames: [ 'name']
+};
+
+var studentList = new List('studentList');
+studentList.add(
+  studentData
+);

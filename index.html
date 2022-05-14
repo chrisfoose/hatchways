@@ -20,16 +20,29 @@
 </head>
 <body>
 <!-- input form -->
-<div id="form">
+<!-- <div id="form">
     <form action="">
         <textarea rows="1" cols="50" name = studentInput id="input">
             
         </textarea>
 
     </form>
-</div>
+</div> -->
 
 <!-- End input form-->
+
+<!-- list.js stuff -->
+
+<div id="studentList">
+    <input class="search" placeholder="Search" />
+    <button class="sort" data-sort="name">Sort</button>
+        <div class="list">
+            <p>Placeholder for search functions</p>
+            <span class="sort" data-sort="name"></span>
+        </div>
+</div>
+
+<!-- end list.js stuff -->
 
 <div id="container">
 
@@ -41,5 +54,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 </body>
 </html>
