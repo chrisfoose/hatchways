@@ -82,6 +82,11 @@ var options = {
 };
 
 var studentList = new List('studentList');
-studentList.add(
-  studentData
-);
+
+  function returnList () {
+  results = document.getElementsById('studentList');
+    return `
+      <div id='studentList'>
+        <h2 class='name'>
+      `
+  }
