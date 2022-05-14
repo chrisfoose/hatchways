@@ -60,7 +60,7 @@ function filterList() {
   let input = document.getElementById('input');
   const filterCase = input.value.toLowerCase();
   const name = document.getElementById('name');
-  const h2 = getelementByTagName('h2');
+  const h2 = getElementByTagName('h2');
 
   for (i = 0; i < input.length; i++) {
     txt = name[i].getElementById('name')[0];
