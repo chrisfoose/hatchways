@@ -94,3 +94,17 @@ pageData().then(studentData => {
 const students = pageData();
 const filteredStudents = students.filter(student => students.firstName.includes(event.target.value) || 
   students.lastName.includes(event.target.value));
+
+//Making a function to display filtered students
+function filterStudent(students) {
+
+    return 
+    
+    `
+      
+      <div id="studentList">
+      <p class='name'>${filteredStudents}</p>
+      </div>
+    `
+    };
+  filterStudent(students);
