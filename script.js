@@ -77,16 +77,20 @@ pageData().then(studentData => {
 //   filterList();
 
 //Putting in code for list.js
-var options = {
-  valueNames: [ 'name']
-};
+// var options = {
+//   valueNames: [ 'name']
+// };
 
-var studentList = new List('studentList');
+// var studentList = new List('studentList');
 
-  function returnList () {
-  results = document.getElementsById('studentList');
-    return `
-      <div id='studentList'>
-        <h2 class='name'>
-      `
-  }
+//   function returnList () {
+//   results = document.getElementsById('studentList');
+//     return `
+//       <div id='studentList'>
+//         <h2 class='name'>
+//       `
+//   }
+
+const students = pageData();
+const filteredStudents = students.filter(student => students.firstName.includes(event.target.value) || 
+  students.lastName.includes(event.target.value));
